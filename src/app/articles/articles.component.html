@@ -1,0 +1,23 @@
+<h3>My Wishlist!</h3>
+<div>
+	<h2>{{ article.name | uppercase }}  </h2>
+ 
+
+ <ul class="articles">
+  <li *ngFor="let article of articles">
+    <span class="badge">{{article.id}}</span> {{article.name}} 
+  </li>
+</ul>
+</div>
+
+
+<div class="grid grid-pad">
+  <a *ngFor="let note of notes" class="col-1-4"
+      routerLink="/detail/{{note.id}}">
+    <div class="module note">
+      <h4>{{note.name}}</h4>
+    </div>
+  </a>
+</div>
+
+<app-note-search></app-note-search>

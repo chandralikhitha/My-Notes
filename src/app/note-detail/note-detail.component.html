@@ -1,0 +1,20 @@
+<div *ngIf="note">
+	
+
+  <h2>{{ note.name | uppercase }} Details</h2>
+  <div class="forms "><span>ID: </span>  <input [(ngModel)]="note.id" placeholder="id"></div>
+  <div class="forms">
+    <label>Task Name:
+      <input [(ngModel)]="note.name" placeholder="name">
+    </label>
+  </div>
+  <div class = "forms">
+	<label>Description:
+    <textarea [(ngModel)]="note.des" placeholder="des" rows="10" >  </textarea>
+    </label>
+   </div>
+
+  <button (click)="goBack()">go back</button>
+  <button (click)="save()">save</button>
+
+</div>
